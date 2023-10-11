@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Record</title>
+
+    <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="my.css"> <!-- 스타일 시트 연결 -->
+
+    <!-- 부트스트랩 JavaScript 및 jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 네비게이션 바 (헤더) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="C:\2023-2\실전프로젝트1\2023-2-PP-proj2-final\V_Logomark_Red.png" alt="발로란트 로고" width="120">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="spacing1">
+
+    </div>
+
+    <h1>Edit Record</h1>
+
+    <div class="spacing2">
+
+    </div>
+
+    <form id="editForm">
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" required>
+
+        <label for="code">Code:</label>
+        <input type="text" id="code" name="code" required>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <button type="button" id="updateButton">수정</button>
+    </form>
+
+    <script>
+        // Existing data (Replace with your data source)
+        const existingData = {
+            color: "흰색", // 이부분을 기존 데이터에 맞게 수정
+            code: "0;p;0;s;1;P;h;0;0l;3;0o;2;0a;1;0f;0;1b;0;A;c;8;u;000000FF;h;0;d;1;b;1;m;1;0l;2;0o;0;0a;1;0f;0;1b;0;S;c;1;s;0.64;o;1",
+            description: "가운데에 빈 공간이 있는 십자선", // 이부분을 기존 데이터에 맞게 수정
+            date: "2023-10-11",
+        };
+
+        // Prepopulate input fields with existing data
+        document.getElementById('color').value = existingData.color;
+        document.getElementById('code').value = existingData.code;
+        document.getElementById('description').value = existingData.description;
+        document.getElementById('date').value = existingData.date;
+
+        document.getElementById('updateButton').addEventListener('click', function () {
+            const color = document.getElementById('color').value;
+            const code = document.getElementById('code').value;
+            const description = document.getElementById('description').value;
+            const date = document.getElementById('date').value;
+
+            if (color.trim() === '' || code.trim() === '' || description.trim() === '' || date.trim() === '') {
+                alert('모든 필수 항목을 입력하세요.');
+            } else if (confirm("게시물을 수정할까요?")) {
+                // You can add JavaScript code here to update the record
+                // You can also perform validation checks before updating
+                alert('게시물이 수정되었습니다.');
+                // You can redirect the user to another page or perform an action here
+            }
+        });
+    </script>
+
+</body>
+
+</html>

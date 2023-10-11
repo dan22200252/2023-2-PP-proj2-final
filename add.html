@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Record</title>
+
+    <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="my.css"> <!-- 스타일 시트 연결 -->
+
+    <!-- 부트스트랩 JavaScript 및 jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<body>
+    <!-- 네비게이션 바 (헤더) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="C:\2023-2\실전프로젝트1\2023-2-PP-proj2-final\V_Logomark_Red.png" alt="발로란트 로고" width="120">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="spacing1">
+
+    </div>
+
+    <h1>Add Record</h1>
+
+    <div class="spacing2">
+
+    </div>
+
+    <form id="addForm">
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" required>
+
+        <label for="code">Code:</label>
+        <input type="text" id="code" name="code" required>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <button type="button" id="addButton">추가</button>
+    </form>
+
+    <script>
+        document.getElementById('addButton').addEventListener('click', function () {
+            const color = document.getElementById('color').value;
+            const code = document.getElementById('code').value;
+            const description = document.getElementById('description').value;
+            const date = document.getElementById('date').value;
+
+            if (color.trim() === '' || code.trim() === '' || description.trim() === '' || date.trim() === '') {
+                alert('모든 필수 항목을 입력하세요.');
+            } else {
+                // You can add JavaScript code here to add the record
+                // You can also perform additional validation checks before adding the record
+                alert('게시물이 추가됩니다.');
+                // You can redirect the user to another page or perform an action here
+            }
+        });
+    </script>
+</body>
+
+</html>

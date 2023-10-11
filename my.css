@@ -1,0 +1,53 @@
+/* 미디어 쿼리를 사용하여 모바일 및 데스크톱 스타일 조정 */
+@media (max-width: 768px) {
+    /* 모바일 스타일 */
+    body {
+        font-size: 14px;
+    }
+}
+@media (min-width: 769px) {
+    /* 데스크톱 스타일 */
+    body {
+        font-size: 16px;
+    }
+}
+
+/* 모달 창 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .modal-content {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  /* 닫기 버튼 스타일 */
+  .close {
+    float: right;
+    cursor: pointer;
+  }
+  
+  /* 클릭한 요소 위치를 나타내는 클래스 */
+  .clicked-element {
+    border: 2px solid red;
+    margin-top: 30px; /* 모달과 충돌하지 않게 여분의 여백을 둡니다. */
+  }
+  
+  .spacing1 {
+    margin: 50px; /* 원하는 크기의 마진을 설정합니다. */
+}
+
+.spacing2 {
+    margin: 20px; /* 원하는 크기의 마진을 설정합니다. */
+}

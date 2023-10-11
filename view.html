@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Record</title>
+
+    <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="my.css"> <!-- 스타일 시트 연결 -->
+
+    <!-- 부트스트랩 JavaScript 및 jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+<body>
+    <!-- 네비게이션 바 (헤더) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="C:\2023-2\실전프로젝트1\2023-2-PP-proj2-final\V_Logomark_Red.png" alt="발로란트 로고" width="120">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="spacing1">
+
+    </div>
+
+    <h1>View Record</h1>
+
+    <div class="spacing2">
+
+    </div>
+
+    <!-- Display Record Information -->
+    <p><strong>Number:</strong> 1</p>
+    <p><strong>Color:</strong> 흰색</p>
+    <p><strong>Code:</strong>
+        0;p;0;s;1;P;h;0;0l;3;0o;2;0a;1;0f;0;1b;0;A;c;8;u;000000FF;h;0;d;1;b;1;m;1;0l;2;0o;0;0a;1;0f;0;1b;0;S;c;1;s;0.64;o;1
+    </p>
+    <p><strong>Description:</strong> 가운데에 빈 공간이 있는 십자선</p>
+    <p><strong>Date:</strong> 2023-10-11</p>
+
+    <!-- Edit Button -->
+    <a href="edit.html">
+        <button>Edit</button>
+    </a>
+
+    <!-- Delete Button -->
+    <button onclick="confirmDelete()">Delete</button>
+
+    <script>
+        function confirmDelete() {
+            if (confirm("게시물을 삭제할까요?")) {
+                // Perform the delete action or redirect to a delete page.
+                // You can use JavaScript or send a request to a server for deletion.
+            }
+        }
+    </script>
+</body>
+
+</html>

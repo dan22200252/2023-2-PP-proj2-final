@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 헤더 예제</title>
+
+  <!-- 부트스트랩 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="my.css"> <!-- 스타일 시트 연결 -->
+
+  <!-- 부트스트랩 JavaScript 및 jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <!-- 네비게이션 바 (헤더) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="C:\2023-2\실전프로젝트1\2023-2-PP-proj2-final\V_Logomark_Red.png" alt="발로란트 로고" width="120">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">홈 <span class="sr-only">(현재)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">서비스</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">포트폴리오</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">연락</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 내용 -->
+  <div class="container mt-4">
+    <h2>My List</h2>
+    <div class="text-right mb-3">
+      <a href="add.html" class="btn btn-primary">Add</a>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped table-sm">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">색상</th>
+            <th scope="col">코드</th>
+            <th scope="col">설명</th>
+            <th scope="col">날짜</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-number"></td>
+            <td><a href="view.html?color=white">흰색</a></td>
+            <td class="copyable"
+              data-content="0;p;0;s;1;P;h;0;0l;3;0o;2;0a;1;0f;0;1b;0;A;c;8;u;000000FF;h;0;d;1;b;1;m;1;0l;2;0o;0;0a;1;0f;0;1b;0;S;c;1;s;0.64;o;1">
+              <i class="fas fa-copy"></i>
+            </td>
+            <td class="memo-icon" data-memo="가운데에 빈 공간이 있는 십자선">
+              <i class="fas fa-sticky-note"></i>
+            </td>
+            <td>2023-10-11</td>
+          </tr>
+          <tr>
+            <td class="row-number"></td>
+            <td><a href="view.html?color=green">연두색</a></td>
+            <td class="copyable"
+              data-content="0;P;c;1;h;0;d;1;z;1;f;0;0t;5;0l;1;0o;2;0a;1;0f;0;1t;1;1l;1;1o;3;1a;1;1m;0;1f;0">
+              <i class="fas fa-copy"></i>
+            </td>
+            <td class "memo-icon" data-memo="겹동그라미">
+              <i class="fas fa-sticky-note"></i>
+            </td>
+            <td>2023-10-11</td>
+          </tr>
+          <tr>
+            <td class="row-number"></td>
+            <td><a href="view.html?color=pink">분홍색</a></td>
+            <td class="copyable"
+              data-content="0;P;c;8;u;F28D9FFF;h;0;d;1;b;1;a;0.254;0t;3;0l;5;0o;0;0a;0.755;0f;0;1t;5;1o;2;1a;1;1m;0;1f;0">
+              <i class="fas fa-copy"></i>
+            </td>
+            <td class="memo-icon" data-memo="사쿠라">
+              <i class="fas fa-sticky-note"></i>
+            </td>
+            <td>2023-10-11</td>
+          </tr>
+          <tr>
+            <td class="row-number"></td>
+            <td><a href="view.html?color=red">빨간색</a></td>
+            <td class="copyable"
+              data-content="0;P;c;7;o;0.1;d;1;z;1;a;0;m;1;0t;10;0l;5;0a;1;0f;0;1t;4;1l;10;1o;1;1a;1;1m;0;1f;0">
+              <i class="fas fa-copy"></i>
+            </td>
+            <td class="memo-icon" data-memo="다이아몬드 >>">
+              <i class="fas fa-sticky-note"></i>
+            </td>
+            <td>2023-10-11</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 페이징 -->
+    <ul class="pagination justify-content-center">
+      <li class="page-item active disabled" id="previousPage"><a class="page-link" href="#">이전</a></li>
+      <li class="page-item"><a class="page-link" id="num" href="#">1</a></li>
+      <li class="page-item" id="nextPage"><a class="page-link" href="#">다음</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // Function to assign row numbers
+    function assignRowNumbers() {
+      var rows = document.querySelectorAll(".row-number");
+      rows.forEach(function (row, index) {
+        row.textContent = index + 1;
+      });
+    }
+
+    // Call the function to assign row numbers
+    assignRowNumbers();
+  </script>
+
+</body>
+
+</html>
